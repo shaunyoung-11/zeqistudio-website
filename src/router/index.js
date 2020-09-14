@@ -8,11 +8,10 @@ import Intro from '../components/index/Intro.vue'
 import Direct from '../components/index/Direction.vue'
 import Member from '../components/index/Member.vue'
 import Prize from '../components/index/Prize.vue'
-import About from '../components/index/About.vue'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   routes: [
     { path: '/', redirect: '/index' },
     {
@@ -55,13 +54,21 @@ export default new Router({
           path: '/prize',
           component: Prize,
           meta: { title: '荣誉奖项 | 择栖工作室' }
-        },
-        {
-          path: '/about',
-          component: About,
-          meta: { title: '关于我们 | 择栖工作室' }
         }
       ]
     }
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  if (to.path === '/login' || to.path === '/register') {
+    const tokenStr = window.sessionStorage.getItem('token')
+    if (tokenStr) {
+      return next(from)
+    }
+  }
+
+  next()
+})
+
+export default router
