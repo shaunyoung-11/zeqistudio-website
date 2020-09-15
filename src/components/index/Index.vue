@@ -4,6 +4,7 @@
     <div class="time">
       <span class="num">{{ days }}</span> 天
       <span class="num">{{ hours }}</span> 时
+      <span class="num">{{ minutes }}</span> 分
       <span class="num">{{ seconds }}</span> 秒
     </div>
     <div class="title2">ZeQi Wants You!</div>
@@ -13,18 +14,38 @@
 <script>
 export default {
   data() {
-    console.log(endTime)
-    return {}
+    return {
+      days: '',
+      hours: '',
+      minutes: '',
+      seconds: '',
+    }
+  },
+  created() {
+    this.countTime()
   },
   methods: {
-    addZero: n => {
+    addZero: (n) => {
       return n < 10 ? '0' + n : n + ''
     },
-    countTime: () => {
-      var startTime = new Date()
-      var endTime = new Date('2020/09/25,16:20:00')
-    }
-  }
+    countTime: function () {
+      var startTime = new Date().getTime()
+      var endTime = new Date('2020/09/25 16:20:00').getTime()
+      var leftTime = (endTime - startTime) / 1000
+      console.log(leftTime)
+      if (leftTime >= 0) {
+        var d = Math.floor(leftTime / 60 / 60 / 24)
+        var h = Math.floor((leftTime - d * (60 * 60 * 24)) / 60 / 60)
+        var m = Math.floor((leftTime - d * (60 * 60 * 24) - h * 60 * 60) / 60)
+        var s = Math.floor(leftTime - d * (60 * 60 * 24) - h * 60 * 60 - m * 60)
+        this.days = this.addZero(d)
+        this.hours = this.addZero(h)
+        this.minutes = this.addZero(m)
+        this.seconds = this.addZero(s)
+      }
+      setTimeout(this.countTime, 1000)
+    },
+  },
 }
 </script>
 
@@ -51,5 +72,9 @@ export default {
 .title2 {
   font-size: 20px;
   font-weight: 400;
+}
+
+.num {
+  color: rgb(214, 15, 15);
 }
 </style>
