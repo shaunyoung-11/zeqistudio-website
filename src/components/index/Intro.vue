@@ -12,7 +12,7 @@
         <img
           class="logo"
           src="https://gitee.com/zeqistudio/zeqistudio/raw/master/image/icon/Logo1.png"
-          alt=""
+          alt
         />
         <h1 class="title">择栖工作室</h1>
       </div>
@@ -47,10 +47,10 @@ export default {
       imgSrc: [
         'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599886732635&di=130da6ea6f27b83b3c3e73f7d53fda0b&imgtype=0&src=http%3A%2F%2Fimage.biaobaiju.com%2Fuploads%2F20190731%2F20%2F1564576654-bCShdNQlDG.jpg',
         'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599886732635&di=78746c11492b6688dd7af7b4287be2c7&imgtype=0&src=http%3A%2F%2Fimg.meitumeixiu.com%2FImages%2FDongWu%2FImages%2F9%2F113.jpg',
-        'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599886732634&di=da85518ba2306e34bcaf8227d9bf9dfa&imgtype=0&src=http%3A%2F%2Fdpic.tiankong.com%2Fv2%2F5j%2FQJ8788042617.jpg'
-      ]
+        'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599886732634&di=da85518ba2306e34bcaf8227d9bf9dfa&imgtype=0&src=http%3A%2F%2Fdpic.tiankong.com%2Fv2%2F5j%2FQJ8788042617.jpg',
+      ],
     }
-  }
+  },
 }
 </script>
 
@@ -121,9 +121,6 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.intro-title {
 }
 
 .intro-title::after {
