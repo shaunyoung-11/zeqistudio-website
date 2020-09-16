@@ -6,7 +6,7 @@
         <div class="item-title">Offer</div>
         <div class="item-content">
           <!-- 蚂蚁金服 -->
-          <div class="item ant">
+          <div class="item ant" title="蚂蚁金服">
             <svg
               t="1600172956235"
               class="icon"
@@ -25,7 +25,7 @@
             </svg>
           </div>
           <!-- 华为 -->
-          <div class="item huawei">
+          <div class="item huawei" title="华为">
             <svg
               t="1600173024260"
               class="icon"
@@ -48,7 +48,7 @@
             </svg>
           </div>
           <!-- 美团 -->
-          <div class="item meituan">
+          <div class="item meituan" title="美团">
             <svg
               t="1600173059506"
               class="icon"
@@ -75,7 +75,7 @@
             </svg>
           </div>
           <!-- 上海云轴 -->
-          <div class="item zstack">
+          <div class="item zstack" title="上海云轴">
             <svg
               t="1600173149353"
               class="icon"
@@ -99,7 +99,7 @@
         <div class="item-title">深造</div>
         <div class="item-content">
           <!-- 北京大学 -->
-          <div class="item pku">
+          <div class="item pku" title="北京大学">
             <svg
               t="1600173194019"
               class="icon"
@@ -148,7 +148,7 @@
             </svg>
           </div>
           <!-- 浙大 -->
-          <div class="item zhejiang">
+          <div class="item zhejiang" title="浙江大学">
             <svg
               t="1600173270411"
               class="icon"
@@ -177,7 +177,7 @@
             </svg>
           </div>
           <!-- 北邮 -->
-          <div class="item beiyou">
+          <div class="item beiyou" title="北京邮电大学">
             <svg
               t="1600173654914"
               class="icon"
@@ -271,5 +271,10 @@ export default {}
 
 .item {
   transform: scale(0.8);
+  transition: all ease-in-out 0.3s;
+}
+
+.item:hover {
+  transform: scale(1);
 }
 </style>

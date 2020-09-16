@@ -8,12 +8,7 @@
         />
         <span class="logo-text">择栖工作室</span>
       </a>
-      <el-menu
-        class="menu"
-        mode="horizontal"
-        :default-active="$route.path"
-        :router="true"
-      >
+      <el-menu class="menu" mode="horizontal" :default-active="$route.path" :router="true">
         <el-menu-item index="/index">首页</el-menu-item>
         <el-menu-item index="/intro">工作室介绍</el-menu-item>
         <el-menu-item index="/direction">技术方向</el-menu-item>
@@ -39,7 +34,7 @@
 export default {
   data() {
     return {
-      showBtn: window.sessionStorage.getItem('token') ? false : true
+      showBtn: window.sessionStorage.getItem('token') ? false : true,
     }
   },
   methods: {
@@ -50,8 +45,8 @@ export default {
     // 跳转到注册界面
     toRegister() {
       this.$router.push('/register')
-    }
-  }
+    },
+  },
 }
 </script>
 
@@ -101,7 +96,7 @@ export default {
 
 .footer {
   width: 100%;
-  height: 600px;
+  height: 443px;
   background-color: rgba(0, 0, 0, 1);
 }
 </style>
