@@ -270,11 +270,40 @@ export default {}
 }
 
 .item {
-  transform: scale(0.8);
-  transition: all ease-in-out 0.3s;
+  opacity: 0;
+  animation: ease-out showItem 0.4s forwards;
 }
 
-.item:hover {
+.item > svg {
+  transform: scale(0.8);
+  transition: all ease-out 0.3s;
+}
+
+.to-work .item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.to-work .item:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+.to-work .item:nth-child(4) {
+  animation-delay: 1.2s;
+}
+
+.to-school .item:nth-child(1) {
+  animation-delay: 1.6s;
+}
+
+.to-school .item:nth-child(2) {
+  animation-delay: 2s;
+}
+
+.to-school .item:nth-child(3) {
+  animation-delay: 2.4s;
+}
+
+.item > svg:hover {
   transform: scale(1);
 }
 </style>
