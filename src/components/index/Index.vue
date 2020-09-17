@@ -18,17 +18,17 @@ export default {
       days: '',
       hours: '',
       minutes: '',
-      seconds: '',
+      seconds: ''
     }
   },
   created() {
     this.countTime()
   },
   methods: {
-    addZero: (n) => {
+    addZero: n => {
       return n < 10 ? '0' + n : n + ''
     },
-    countTime: function () {
+    countTime: function() {
       var startTime = new Date().getTime()
       var endTime = new Date('2020/09/25 16:20:00').getTime()
       var leftTime = (endTime - startTime) / 1000
@@ -44,8 +44,8 @@ export default {
         this.seconds = this.addZero(s)
       }
       setTimeout(this.countTime, 1000)
-    },
-  },
+    }
+  }
 }
 </script>
 
@@ -60,17 +60,17 @@ export default {
 }
 
 .title1 {
-  font-size: 70px;
+  font-size: 5vw;
   font-weight: 700;
 }
 
 .time {
-  font-size: 120px;
+  font-size: calc(90vw / 12);
   font-weight: 900;
 }
 
 .title2 {
-  font-size: 20px;
+  font-size: 1.3vw;
   font-weight: 400;
 }
 
