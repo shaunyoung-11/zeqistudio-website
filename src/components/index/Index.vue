@@ -60,17 +60,17 @@ export default {
 }
 
 .title1 {
-  font-size: 70px;
+  font-size: 5vw;
   font-weight: 700;
 }
 
 .time {
-  font-size: 120px;
+  font-size: calc(90vw / 12);
   font-weight: 900;
 }
 
 .title2 {
-  font-size: 20px;
+  font-size: 1.3vw;
   font-weight: 400;
 }
 
