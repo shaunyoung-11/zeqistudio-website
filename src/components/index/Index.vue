@@ -15,10 +15,10 @@
 export default {
   data() {
     return {
-      days: '',
-      hours: '',
-      minutes: '',
-      seconds: '',
+      days: '0',
+      hours: '0',
+      minutes: '0',
+      seconds: '0',
     }
   },
   created() {
@@ -30,7 +30,7 @@ export default {
     },
     countTime: function () {
       var startTime = new Date().getTime()
-      var endTime = new Date('2020/09/25 16:20:00').getTime()
+      var endTime = new Date('2020/09/26 19:35:00').getTime()
       var leftTime = (endTime - startTime) / 1000
       console.log(leftTime)
       if (leftTime >= 0) {
